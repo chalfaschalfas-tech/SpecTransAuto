@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СпецТрансАвто | Аренда спецтехники в Ярославле</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Анимация градиентного фона */
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animated-gradient {
+            background: linear-gradient(270deg, #facc15, #eab308, #ca8a04);
+            background-size: 600% 600%;
+            animation: gradient-animation 8s ease infinite;
+        }
+        /* Плавающие элементы */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .floating-shape { animation: float 6s ease-in-out infinite; }
+        
+        /* Параллакс эффект для фона */
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans selection:bg-yellow-500 selection:text-black overflow-x-hidden">
+
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-yellow-500/20 transition-all duration-300" data-aos="fade-down">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
+            <div class="flex flex-col group cursor-pointer">
+                <span class="text-2xl font-black tracking-tighter uppercase text-gray-900 group-hover:text-yellow-500 transition-colors">СпецТранс<span class="text-yellow-500 group-hover:text-gray-900 transition-colors">Авто</span></span>
+                <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400 group-hover:text-yellow-600 transition-colors">Профессиональная аренда техники</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-widest text-gray-600">
+                <a href="#about" class="relative group overflow-hidden hover:text-yellow-600 transition-colors py-2">
+                    <span class="relative z-10">О компании</span>
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                </a>
+                <a href="#catalog" class="relative group overflow-hidden hover:text-yellow-600 transition-colors py-2">
+                    <span class="relative z-10">Техника</span>
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                </a>
+                <a href="#contact" class="relative group overflow-hidden hover:text-yellow-600 transition-colors py-2">
+                    <span class="relative z-10">Заявка</span>
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                </a>
+            </nav>
+            <div class="flex flex-col items-end" data-tilt data-tilt-scale="1.05">
+                <a href="tel:+79966553170" class="text-xl font-black hover:text-yellow-600 transition-colors relative group">
+                    <span>+7 996 655 3170</span>
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-right"></span>
+                </a>
+                <span class="text-[10px] text-green-600 font-bold uppercase flex items-center gap-1">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    </span>
+                    Оперативная подача
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative h-screen flex items-center justify-center text-white overflow-hidden parallax-bg" style="background-image: url('image_1.png');">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/80 z-10"></div>
+        
+        <div class="absolute top-20 left-10 w-32 h-32 bg-yellow-500/20 rounded-full blur-3xl floating-shape z-20" style="animation-delay: 0s;"></div>
+        <div class="absolute bottom-20 right-10 w-48 h-48 bg-yellow-500/10 rounded-full blur-3xl floating-shape z-20" style="animation-delay: 2s;"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 w-full z-30 text-center md:text-left">
+            <div class="max-w-3xl" data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-block bg-yellow-500 text-black px-4 py-1 text-xs font-black uppercase tracking-widest mb-6 rounded-sm transform -skew-x-12">
+                    <span class="block transform skew-x-12">Ярославль и область</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black uppercase leading-none mb-6 drop-shadow-lg">
+                    Аренда <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">спецтехники</span> <br>
+                    для любых задач
+                </h1>
+                <p class="text-xl text-gray-300 mb-10 border-l-4 border-yellow-500 pl-6 leading-relaxed max-w-2xl bg-black/30 backdrop-blur-sm p-4 rounded-r-lg">
+                    Мощные автокраны, надежные экскаваторы и универсальные манипуляторы. Собственный парк, опытные операторы, работаем 24/7.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#catalog" class="group relative overflow-hidden bg-yellow-500 text-black px-10 py-5 rounded-sm font-black uppercase tracking-widest hover:text-white transition-all duration-300 shadow-[0_0_30px_rgba(234,179,8,0.5)] hover:shadow-[0_0_50px_rgba(234,179,8,0.8)]" data-tilt data-tilt-scale="1.05">
+                        <span class="relative z-10">Выбрать технику</span>
+                        <div class="absolute inset-0 bg-black scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 z-0"></div>
+                    </a>
+                    <a href="#contact" class="group relative overflow-hidden bg-white/10 backdrop-blur-md text-white border-2 border-white/20 px-10 py-5 rounded-sm font-black uppercase tracking-widest hover:border-yellow-500 transition-all duration-300" data-tilt data-tilt-scale="1.05">
+                        <span class="relative z-10 group-hover:text-yellow-500 transition-colors">Оставить заявку</span>
+                        <div class="absolute inset-0 bg-white/10 scale-y-0 group-hover:scale-y-100 transition-transform origin-bottom duration-300 z-0"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-30 animate-bounce">
+            <a href="#about" class="text-yellow-500 text-3xl"><i class="fa-solid fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute -right-20 top-0 w-64 h-64 bg-yellow-500/5 rounded-full blur-3xl floating-shape" style="animation-duration: 8s;"></div>
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-sm font-black text-yellow-500 uppercase tracking-[0.3em] mb-4 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-1/2 after:h-1 after:bg-yellow-500">О компании</h2>
+                    <h3 class="text-4xl font-black uppercase mb-8 leading-tight text-gray-900 mt-4">Надёжный партнёр <br>на вашей стройплощадке</h3>
+                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                        <p>Мы предоставляем в аренду современную и исправную спецтехнику с 2008 года. Наш опыт позволяет решать задачи любой сложности: от перемещения грузов до масштабных земляных работ.</p>
+                        <p class="font-bold text-gray-900 italic border-l-4 border-yellow-500 pl-4 py-2 bg-yellow-50 rounded-r-lg shadow-sm">"Гарантируем подачу техники точно в срок и профессионализм наших операторов."</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6" data-aos="fade-left">
+                    <div class="p-8 bg-gray-50 rounded-xl shadow-lg border-b-4 border-yellow-500 transform hover:-translate-y-2 transition-all duration-300 group" data-tilt>
+                        <i class="fa-solid fa-calendar-check text-4xl text-yellow-500 mb-4 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-5xl font-black text-gray-900 block mb-2 counter" data-target="18">0</span>
+                        <p class="text-sm font-bold uppercase tracking-wider text-gray-500">лет успешной работы</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 rounded-xl shadow-lg border-b-4 border-yellow-500 transform hover:-translate-y-2 transition-all duration-300 group" data-tilt>
+                         <i class="fa-solid fa-truck-front text-4xl text-yellow-500 mb-4 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-5xl font-black text-gray-900 block mb-2 flex"><span class="counter" data-target="30">0</span>+</span>
+                        <p class="text-sm font-bold uppercase tracking-wider text-gray-500">единиц техники</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalog" class="py-24 bg-gray-100 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-black uppercase inline-block relative z-10 after:content-[''] after:absolute after:-bottom-4 after:left-1/2 after:-translate-x-1/2 after:w-24 after:h-2 after:bg-yellow-500">Наш автопарк</h2>
+            <p class="mt-6 text-gray-500 font-medium text-lg">Вся техника в собственности, обслужена и готова к работе</p>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col border-t-4 border-yellow-500 transform hover:-translate-y-3 transition-all duration-300 group" data-aos="fade-up" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="image_0.png" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Ивановец 16т">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="p-8 flex-grow flex flex-col justify-between relative z-10 bg-white">
+                    <div>
+                        <h4 class="text-xl font-black uppercase mb-4 text-gray-900 group-hover:text-yellow-500 transition-colors">Автокран «Ивановец» 16т</h4>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-3">
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Грузоподъемность:</span> <strong class="text-gray-900 text-base">16 тонн</strong></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Длина стрелы:</span> <strong class="text-gray-900 text-base">18 метров</strong></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="block text-center bg-gray-900 text-white py-4 font-black uppercase rounded-sm hover:bg-yellow-500 hover:text-black transition-all duration-300 relative overflow-hidden group/btn shadow-md">
+                        <span class="relative z-10">Заказать</span>
+                        <div class="absolute inset-0 bg-yellow-500 scale-x-0 group-hover/btn:scale-x-100 transition-transform origin-left duration-300 z-0"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col border-t-4 border-yellow-500 transform hover:-translate-y-3 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="image_1.png" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Галичанин 25т">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="p-8 flex-grow flex flex-col justify-between relative z-10 bg-white">
+                    <div>
+                        <h4 class="text-xl font-black uppercase mb-4 text-gray-900 group-hover:text-yellow-500 transition-colors">Автокран «Галичанин» 25т</h4>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-3">
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Грузоподъемность:</span> <strong class="text-gray-900 text-base">25 тонн</strong></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Длина стрелы:</span> <strong class="text-gray-900 text-base">22 метра</strong></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="block text-center bg-gray-900 text-white py-4 font-black uppercase rounded-sm hover:bg-yellow-500 hover:text-black transition-all duration-300 relative overflow-hidden group/btn shadow-md">
+                        <span class="relative z-10">Заказать</span>
+                        <div class="absolute inset-0 bg-yellow-500 scale-x-0 group-hover/btn:scale-x-100 transition-transform origin-left duration-300 z-0"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col border-t-4 border-yellow-500 transform hover:-translate-y-3 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="image_2.png" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Клинцы 25т">
+                    <div class="absolute top-4 right-4 bg-yellow-500 text-black text-xs font-black uppercase px-3 py-1 rounded-sm shadow-sm z-20">Вездеход</div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="p-8 flex-grow flex flex-col justify-between relative z-10 bg-white">
+                    <div>
+                        <h4 class="text-xl font-black uppercase mb-4 text-gray-900 group-hover:text-yellow-500 transition-colors">Клинцы 25т (Вездеход 6х6)</h4>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-3">
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Грузоподъемность:</span> <strong class="text-gray-900 text-base">25 тонн</strong></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Длина стрелы:</span> <strong class="text-gray-900 text-base">31 метр</strong></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="block text-center bg-gray-900 text-white py-4 font-black uppercase rounded-sm hover:bg-yellow-500 hover:text-black transition-all duration-300 relative overflow-hidden group/btn shadow-md">
+                        <span class="relative z-10">Заказать</span>
+                        <div class="absolute inset-0 bg-yellow-500 scale-x-0 group-hover/btn:scale-x-100 transition-transform origin-left duration-300 z-0"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col border-t-4 border-yellow-500 transform hover:-translate-y-3 transition-all duration-300 group" data-aos="fade-up" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="image_3.png" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Галичанин 32т">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="p-8 flex-grow flex flex-col justify-between relative z-10 bg-white">
+                    <div>
+                        <h4 class="text-xl font-black uppercase mb-4 text-gray-900 group-hover:text-yellow-500 transition-colors">Автокран «Галичанин» 32т</h4>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-3">
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Грузоподъемность:</span> <strong class="text-gray-900 text-base">32 тонны</strong></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Длина стрелы:</span> <strong class="text-gray-900 text-base">31 метр</strong></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="block text-center bg-gray-900 text-white py-4 font-black uppercase rounded-sm hover:bg-yellow-500 hover:text-black transition-all duration-300 relative overflow-hidden group/btn shadow-md">
+                        <span class="relative z-10">Заказать</span>
+                        <div class="absolute inset-0 bg-yellow-500 scale-x-0 group-hover/btn:scale-x-100 transition-transform origin-left duration-300 z-0"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col border-t-4 border-yellow-500 transform hover:-translate-y-3 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="image_4.png" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Zoomlion">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="p-8 flex-grow flex flex-col justify-between relative z-10 bg-white">
+                    <div>
+                        <h4 class="text-xl font-black uppercase mb-4 text-gray-900 group-hover:text-yellow-500 transition-colors">Автокран Zoomlion ZTC300</h4>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-3">
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Грузоподъемность:</span> <strong class="text-gray-900 text-base">30 тонн</strong></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Стрела + гусек:</span> <strong class="text-gray-900 text-base">42м + 9м</strong></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="block text-center bg-gray-900 text-white py-4 font-black uppercase rounded-sm hover:bg-yellow-500 hover:text-black transition-all duration-300 relative overflow-hidden group/btn shadow-md">
+                        <span class="relative z-10">Заказать</span>
+                        <div class="absolute inset-0 bg-yellow-500 scale-x-0 group-hover/btn:scale-x-100 transition-transform origin-left duration-300 z-0"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col border-t-4 border-yellow-500 transform hover:-translate-y-3 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="image_5.png" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Liebherr">
+                    <div class="absolute top-4 right-4 bg-yellow-500 text-black text-xs font-black uppercase px-3 py-1 rounded-sm shadow-sm z-20">Флагман</div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="p-8 flex-grow flex flex-col justify-between relative z-10 bg-white">
+                    <div>
+                        <h4 class="text-xl font-black uppercase mb-4 text-gray-900 group-hover:text-yellow-500 transition-colors">Liebherr LTM 1055/1 (6х6)</h4>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-3">
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Грузоподъемность:</span> <strong class="text-gray-900 text-base">55 тонн</strong></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Стрела + гусек:</span> <strong class="text-gray-900 text-base">40м + 16м</strong></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="block text-center bg-gray-900 text-white py-4 font-black uppercase rounded-sm hover:bg-yellow-500 hover:text-black transition-all duration-300 relative overflow-hidden group/btn shadow-md">
+                        <span class="relative z-10">Заказать</span>
+                        <div class="absolute inset-0 bg-yellow-500 scale-x-0 group-hover/btn:scale-x-100 transition-transform origin-left duration-300 z-0"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col border-t-4 border-yellow-500 transform hover:-translate-y-3 transition-all duration-300 group" data-aos="fade-up" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="image_6.png" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Автовышка">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="p-8 flex-grow flex flex-col justify-between relative z-10 bg-white">
+                    <div>
+                        <h4 class="text-xl font-black uppercase mb-4 text-gray-900 group-hover:text-yellow-500 transition-colors">Автовышка КАМАЗ (6х6)</h4>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-3">
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Высота подъема:</span> <strong class="text-gray-900 text-base">28 метров</strong></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Тип стрелы:</span> <strong class="text-gray-900 text-base">Телескопическая</strong></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="block text-center bg-gray-900 text-white py-4 font-black uppercase rounded-sm hover:bg-yellow-500 hover:text-black transition-all duration-300 relative overflow-hidden group/btn shadow-md">
+                        <span class="relative z-10">Заказать</span>
+                        <div class="absolute inset-0 bg-yellow-500 scale-x-0 group-hover/btn:scale-x-100 transition-transform origin-left duration-300 z-0"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col border-t-4 border-yellow-500 transform hover:-translate-y-3 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="image_7.png" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Hitachi">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="p-8 flex-grow flex flex-col justify-between relative z-10 bg-white">
+                    <div>
+                        <h4 class="text-xl font-black uppercase mb-4 text-gray-900 group-hover:text-yellow-500 transition-colors">Экскаватор Hitachi Zaxis 160W</h4>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-3">
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Тип:</span> <strong class="text-gray-900 text-base">Колесный</strong></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Объем ковша:</span> <strong class="text-gray-900 text-base">0.8 м³</strong></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Глубина копания:</span> <strong class="text-gray-900 text-base">5.8 м</strong></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="block text-center bg-gray-900 text-white py-4 font-black uppercase rounded-sm hover:bg-yellow-500 hover:text-black transition-all duration-300 relative overflow-hidden group/btn shadow-md">
+                        <span class="relative z-10">Заказать</span>
+                        <div class="absolute inset-0 bg-yellow-500 scale-x-0 group-hover/btn:scale-x-100 transition-transform origin-left duration-300 z-0"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col border-t-4 border-yellow-500 transform hover:-translate-y-3 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="image_8.png" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Погрузчик">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="p-8 flex-grow flex flex-col justify-between relative z-10 bg-white">
+                    <div>
+                        <h4 class="text-xl font-black uppercase mb-4 text-gray-900 group-hover:text-yellow-500 transition-colors">Экскаватор-погрузчик JCB</h4>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-3">
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Тип:</span> <strong class="text-gray-900 text-base">Равноколесный</strong></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Оборудование:</span> <strong class="text-gray-900 text-base">Ковш / Гидромолот</strong></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="block text-center bg-gray-900 text-white py-4 font-black uppercase rounded-sm hover:bg-yellow-500 hover:text-black transition-all duration-300 relative overflow-hidden group/btn shadow-md">
+                        <span class="relative z-10">Заказать</span>
+                        <div class="absolute inset-0 bg-yellow-500 scale-x-0 group-hover/btn:scale-x-100 transition-transform origin-left duration-300 z-0"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col border-t-4 border-yellow-500 transform hover:-translate-y-3 transition-all duration-300 group" data-aos="fade-up" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="image_9.png" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Фронтальный погрузчик">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="p-8 flex-grow flex flex-col justify-between relative z-10 bg-white">
+                    <div>
+                        <h4 class="text-xl font-black uppercase mb-4 text-gray-900 group-hover:text-yellow-500 transition-colors">Фронтальный погрузчик</h4>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-3">
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Объем ковша:</span> <strong class="text-gray-900 text-base">2.0 м³</strong></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Назначение:</span> <strong class="text-gray-900 text-base">Погрузка сыпучих</strong></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="block text-center bg-gray-900 text-white py-4 font-black uppercase rounded-sm hover:bg-yellow-500 hover:text-black transition-all duration-300 relative overflow-hidden group/btn shadow-md">
+                        <span class="relative z-10">Заказать</span>
+                        <div class="absolute inset-0 bg-yellow-500 scale-x-0 group-hover/btn:scale-x-100 transition-transform origin-left duration-300 z-0"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col border-t-4 border-yellow-500 transform hover:-translate-y-3 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="image_10.png" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Komatsu">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="p-8 flex-grow flex flex-col justify-between relative z-10 bg-white">
+                    <div>
+                        <h4 class="text-xl font-black uppercase mb-4 text-gray-900 group-hover:text-yellow-500 transition-colors">Экскаватор Komatsu</h4>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-3">
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Тип:</span> <strong class="text-gray-900 text-base">Гусеничный</strong></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Объем ковша:</span> <strong class="text-gray-900 text-base">1.2 м³</strong></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Глубина копания:</span> <strong class="text-gray-900 text-base">6.9 м</strong></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="block text-center bg-gray-900 text-white py-4 font-black uppercase rounded-sm hover:bg-yellow-500 hover:text-black transition-all duration-300 relative overflow-hidden group/btn shadow-md">
+                        <span class="relative z-10">Заказать</span>
+                        <div class="absolute inset-0 bg-yellow-500 scale-x-0 group-hover/btn:scale-x-100 transition-transform origin-left duration-300 z-0"></div>
+                    </a>
+                </div>
+            </div>
+
+             <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col border-t-4 border-yellow-500 transform hover:-translate-y-3 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="image_11.png" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" alt="Манипулятор">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="p-8 flex-grow flex flex-col justify-between relative z-10 bg-white">
+                    <div>
+                        <h4 class="text-xl font-black uppercase mb-4 text-gray-900 group-hover:text-yellow-500 transition-colors">Манипулятор КАМАЗ</h4>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-3">
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Г/П стрелы:</span> <strong class="text-gray-900 text-base">до 7 тонн</strong></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Г/П борта:</span> <strong class="text-gray-900 text-base">до 10 тонн</strong></li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="block text-center bg-gray-900 text-white py-4 font-black uppercase rounded-sm hover:bg-yellow-500 hover:text-black transition-all duration-300 relative overflow-hidden group/btn shadow-md">
+                        <span class="relative z-10">Заказать</span>
+                        <div class="absolute inset-0 bg-yellow-500 scale-x-0 group-hover/btn:scale-x-100 transition-transform origin-left duration-300 z-0"></div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 animated-gradient relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/10 backdrop-blur-sm"></div>
+        <div class="max-w-4xl mx-auto px-4 relative z-10" data-aos="zoom-in">
+            <div class="bg-white/95 p-10 md:p-14 shadow-2xl rounded-2xl border-2 border-yellow-500/50 transform transition-all hover:shadow-[0_0_40px_rgba(234,179,8,0.3)]" data-tilt data-tilt-max="2" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.05">
+                <h2 class="text-4xl font-black uppercase text-center mb-4 text-gray-900 drop-shadow-sm">Оставить заявку</h2>
+                <p class="text-center text-gray-600 mb-10 font-medium text-lg">Заполните форму, и мы свяжемся с вами в течение 5 минут для подбора техники</p>
+                
+                <form id="leadForm" class="grid md:grid-cols-2 gap-6">
+                    <div class="relative group">
+                        <input type="text" required class="w-full bg-gray-50 p-5 pt-7 rounded-sm border-2 border-gray-200 focus:border-yellow-500 outline-none transition-all font-bold text-gray-800 peer placeholder-transparent" id="nameInput" placeholder="Ваше имя">
+                         <label for="nameInput" class="absolute left-5 top-5 text-gray-400 text-sm font-bold uppercase transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-5 peer-focus:top-2 peer-focus:text-xs peer-focus:text-yellow-600 peer-valid:top-2 peer-valid:text-xs peer-valid:text-yellow-600">Как к вам обращаться?</label>
+                    </div>
+                    <div class="relative group">
+                        <input type="tel" required class="w-full bg-gray-50 p-5 pt-7 rounded-sm border-2 border-gray-200 focus:border-yellow-500 outline-none transition-all font-bold text-gray-800 peer placeholder-transparent" id="phoneInput" placeholder="Номер телефона">
+                         <label for="phoneInput" class="absolute left-5 top-5 text-gray-400 text-sm font-bold uppercase transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-5 peer-focus:top-2 peer-focus:text-xs peer-focus:text-yellow-600 peer-valid:top-2 peer-valid:text-xs peer-valid:text-yellow-600">Номер телефона *</label>
+                    </div>
+                    <div class="relative group md:col-span-2">
+                        <select class="w-full bg-gray-50 p-5 rounded-sm border-2 border-gray-200 focus:border-yellow-500 outline-none transition-all font-bold text-gray-800 appearance-none cursor-pointer" id="techSelect">
+                            <option value="" disabled selected>Какая техника вас интересует?</option>
+                            <option>Автокран</option>
+                            <option>Экскаватор</option>
+                            <option>Манипулятор</option>
+                            <option>Автовышка</option>
+                            <option>Фронтальный погрузчик</option>
+                            <option>Другое / Нужна консультация</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down absolute right-5 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+                    </div>
+                    
+                    <button type="submit" id="submitBtn" class="md:col-span-2 bg-gray-900 text-white py-5 rounded-sm text-xl font-black uppercase tracking-widest hover:bg-black transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 relative overflow-hidden group">
+                        <span class="relative z-10 flex items-center justify-center gap-3"><i class="fa-solid fa-paper-plane"></i> Жду звонка</span>
+                        <div class="absolute inset-0 bg-yellow-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 z-0"></div>
+                    </button>
+                    
+                    <div id="successMsg" class="hidden md:col-span-2 bg-green-100 border-2 border-green-500 text-green-800 px-6 py-5 rounded-sm text-center font-bold text-lg flex items-center justify-center gap-3 shadow-md transform transition-all scale-95 opacity-0">
+                        <i class="fa-solid fa-circle-check text-2xl"></i> <span>Заявка успешно отправлена! Ожидайте звонка диспетчера.</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-16 border-t-[10px] border-yellow-500 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12 relative z-10">
+            <div data-aos="fade-up">
+                <span class="text-3xl font-black tracking-tighter uppercase relative inline-block">СпецТранс<span class="text-yellow-500">Авто</span><i class="fa-solid fa-helmet-safety absolute -top-3 -right-6 text-yellow-500 text-xl rotate-12"></i></span>
+                <p class="mt-6 text-gray-400 text-sm leading-relaxed pr-4">Ваш надежный партнер в сфере аренды спецтехники в Ярославле и Ярославской области. Работаем официально, с НДС, предоставляем полный пакет документов.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <h5 class="font-black uppercase mb-6 text-yellow-500 tracking-wider relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-1/3 after:h-0.5 after:bg-yellow-500">Навигация</h5>
+                <ul class="space-y-3 text-gray-400 font-medium uppercase text-sm">
+                    <li><a href="#catalog" class="hover:text-yellow-500 transition-colors flex items-center gap-2 group"><i class="fa-solid fa-chevron-right text-xs text-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity"></i> Каталог техники</a></li>
+                    <li><a href="#about" class="hover:text-yellow-500 transition-colors flex items-center gap-2 group"><i class="fa-solid fa-chevron-right text-xs text-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity"></i> О компании</a></li>
+                    <li><a href="#contact" class="hover:text-yellow-500 transition-colors flex items-center gap-2 group"><i class="fa-solid fa-chevron-right text-xs text-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity"></i> Оставить заявку</a></li>
+                </ul>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h5 class="font-black uppercase mb-6 text-yellow-500 tracking-wider relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-1/3 after:h-0.5 after:bg-yellow-500">Диспетчерская</h5>
+                <div class="flex flex-col space-y-3 mb-6">
+                    <a href="tel:+79966553170" class="font-black text-2xl hover:text-yellow-500 transition-colors flex items-center gap-3 group"><i class="fa-solid fa-phone-volume group-hover:animate-wiggle"></i> +7 996 655 3170</a>
+                    <a href="tel:89992337179" class="font-bold text-xl text-gray-400 hover:text-yellow-500 transition-colors flex items-center gap-3 group"><i class="fa-solid fa-mobile-screen group-hover:animate-wiggle"></i> 8 (999) 233-71-79</a>
+                </div>
+                <p class="text-gray-500 text-sm font-bold uppercase flex items-center gap-2"><i class="fa-solid fa-location-dot text-yellow-500"></i> г. Ярославль</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 text-xs font-bold uppercase relative z-10">
+            <p>&copy; 2024 СпецТрансАвто. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Инициализация AOS (Animate On Scroll)
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+            easing: 'ease-in-out-cubic'
+        });
+
+        // Инициализация Vanilla-Tilt для карточек
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+            max: 10,
+            speed: 400,
+            scale: 1.02,
+            glare: true,
+            "max-glare": 0.1
+        });
+
+        // Анимация счетчиков
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            counter.innerText = '0';
+            const updateCounter = () => {
+                const target = +counter.getAttribute('data-target');
+                const c = +counter.innerText;
+                const increment = target / 100;
+                if (c < target) {
+                    counter.innerText = `${Math.ceil(c + increment)}`;
+                    setTimeout(updateCounter, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    updateCounter();
+                    observer.disconnect();
+                }
+            }, { threshold: 0.5 });
+            observer.observe(counter);
+        });
+
+        // Обработка формы
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const msg = document.getElementById('successMsg');
+            const originalBtnHtml = btn.innerHTML;
+            
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin text-2xl"></i> <span class="ml-3">Отправка...</span>';
+            btn.classList.add('opacity-80', 'cursor-not-allowed');
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = originalBtnHtml;
+                btn.classList.remove('opacity-80', 'cursor-not-allowed');
+                btn.disabled = false;
+                this.reset();
+                msg.classList.remove('hidden');
+                setTimeout(() => {
+                     msg.classList.remove('scale-95', 'opacity-0');
+                     msg.classList.add('scale-100', 'opacity-100');
+                }, 10);
+                setTimeout(() => {
+                    msg.classList.remove('scale-100', 'opacity-100');
+                    msg.classList.add('scale-95', 'opacity-0');
+                    setTimeout(() => msg.classList.add('hidden'), 300);
+                }, 5000);
+            }, 2000);
+        });
+
+        // Параллакс эффект для фона
+        window.addEventListener('scroll', function() {
+            const parallaxBg = document.querySelector('.parallax-bg');
+            let scrollPosition = window.pageYOffset;
+            parallaxBg.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+        });
+
+    </script>
+</body>
+</html>
