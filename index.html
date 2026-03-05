@@ -3,309 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>СпецТрансАвто | Аренда спецтехники Ярославль</title>
+    <title>СпецТрансАвто | Аренда спецтехники</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        :root {
-            --brand-yellow: #facc15;
-            --brand-dark: #111827;
-        }
-        /* Идеальное выравнивание для фото */
-        .img-container {
-            aspect-ratio: 16 / 10;
-            overflow: hidden;
-            position: relative;
-        }
-        .img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        /* Плавный скролл с отступом под шапку */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; } /* Защита от горизонтального скролла */
+        
+        .img-box { aspect-ratio: 4 / 3; overflow: hidden; background: #f3f4f6; }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+        .card:hover .img-box img { transform: scale(1.05); }
+        
         section { scroll-margin-top: 80px; }
         
-        /* Убираем гигантизм на мобилках */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem !important; line-height: 1.1 !important; }
-            .hero-subtitle { font-size: 1rem !important; }
+        /* Стили для нового фона без фото */
+        .premium-bg {
+            background: radial-gradient(circle at 10% 20%, rgb(15, 23, 42) 0%, rgb(0, 0, 0) 90%);
+        }
+        .pattern-overlay {
+            background-image: radial-gradient(#facc15 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.05;
         }
     </style>
 </head>
-<body class="bg-white text-gray-900 font-sans antialiased overflow-x-hidden">
+<body class="bg-slate-50 text-slate-900 antialiased">
 
-    <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm h-20">
-        <div class="max-w-7xl mx-auto px-4 h-full flex justify-between items-center">
-            <div class="flex flex-col">
-                <span class="text-xl md:text-2xl font-black tracking-tighter uppercase leading-none">СпецТранс<span class="text-yellow-500">Авто</span></span>
-                <span class="text-[9px] uppercase tracking-widest font-bold text-gray-400 mt-1">Ярославская область</span>
+    <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex justify-between items-center">
+            <div class="flex flex-col leading-none">
+                <span class="text-xl sm:text-2xl font-black tracking-tighter uppercase text-slate-900">СпецТранс<span class="text-yellow-500">Авто</span></span>
+                <span class="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] font-bold text-slate-400 mt-1">Ярославль и область</span>
             </div>
-            <a href="tel:+79966553170" class="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-yellow-500 hover:text-black transition-all">
+            <a href="tel:+79966553170" class="flex items-center gap-2 bg-slate-900 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-bold hover:bg-yellow-500 hover:text-black transition-all">
                 <i class="fa-solid fa-phone"></i>
                 <span class="hidden sm:inline">+7 996 655 3170</span>
+                <span class="sm:hidden">Позвонить</span>
             </a>
         </div>
     </header>
 
-    <section class="relative h-[85vh] flex items-center justify-center overflow-hidden bg-gray-900">
-        <div class="absolute inset-0 z-0">
-            <img src="image_1.png" class="w-full h-full object-cover opacity-40" alt="Фон">
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-gray-900"></div>
-        </div>
+    <section class="relative min-h-[85vh] flex items-center justify-center pt-20 premium-bg overflow-hidden">
+        <div class="absolute inset-0 pattern-overlay"></div>
         
-        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center" data-aos="zoom-out" data-aos-duration="1200">
-            <h1 class="text-4xl md:text-7xl font-black uppercase text-white mb-6 tracking-tight">
-                Профессиональная <br><span class="text-yellow-500">аренда спецтехники</span>
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center" data-aos="fade-up">
+            <div class="inline-block px-4 py-1.5 mb-6 border border-yellow-500/30 rounded-full bg-yellow-500/10 backdrop-blur-md">
+                <span class="text-yellow-500 text-[10px] sm:text-xs font-black uppercase tracking-widest">Аренда спецтехники без посредников</span>
+            </div>
+            <h1 class="text-3xl sm:text-5xl md:text-7xl font-black text-white uppercase mb-6 tracking-tighter leading-tight break-words">
+                Мощная техника <br>для <span class="text-yellow-500">ваших задач</span>
             </h1>
-            <p class="hero-subtitle text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-medium">
-                Собственный парк из 12 единиц техники. Работаем по договору, точно в срок, с опытными машинистами.
+            <p class="text-base sm:text-lg text-slate-300 mb-10 max-w-2xl mx-auto font-medium px-2">
+                Собственный автопарк. Опытные операторы. Подача техники на объект точно в оговоренный срок.
             </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#catalog" class="bg-yellow-500 text-black px-8 py-4 rounded-sm font-black uppercase tracking-widest hover:bg-white transition-colors">Смотреть технику</a>
-                <a href="tel:+79966553170" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-sm font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all">Позвонить сейчас</a>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full px-4 sm:px-0">
+                <a href="#categories" class="w-full sm:w-auto text-center bg-yellow-500 text-black px-8 py-4 rounded-xl font-black uppercase tracking-widest hover:bg-white transition-all">
+                    Каталог техники
+                </a>
+                <a href="tel:+79966553170" class="w-full sm:w-auto text-center bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all">
+                    Связаться с нами
+                </a>
             </div>
         </div>
     </section>
 
-    <nav class="sticky top-20 z-40 bg-gray-50 border-b border-gray-200 py-4 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex overflow-x-auto no-scrollbar gap-2 md:justify-center">
-                <a href="#cranes" class="whitespace-nowrap px-6 py-2 bg-white border border-gray-200 rounded-full text-xs font-black uppercase tracking-widest hover:border-yellow-500 hover:text-yellow-600 transition-all shadow-sm">Автокраны</a>
-                <a href="#excavators" class="whitespace-nowrap px-6 py-2 bg-white border border-gray-200 rounded-full text-xs font-black uppercase tracking-widest hover:border-yellow-500 hover:text-yellow-600 transition-all shadow-sm">Экскаваторы</a>
-                <a href="#special" class="whitespace-nowrap px-6 py-2 bg-white border border-gray-200 rounded-full text-xs font-black uppercase tracking-widest hover:border-yellow-500 hover:text-yellow-600 transition-all shadow-sm">Спецтехника</a>
+    <section id="about" class="py-20 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-2xl sm:text-4xl font-black uppercase tracking-tighter mb-4">Почему работают с нами</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-16 h-16 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-truck-monster"></i>
+                    </div>
+                    <h3 class="text-lg font-black uppercase mb-2">Свой автопарк</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Вся техника (12 единиц) находится в нашей собственности. Вы не переплачиваете посредникам.</p>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </div>
+                    <h3 class="text-lg font-black uppercase mb-2">Опытные машинисты</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Квалифицированные операторы со стажем от 5 лет. Выполняют работу быстро и без простоев.</p>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-file-contract"></i>
+                    </div>
+                    <h3 class="text-lg font-black uppercase mb-2">Надежность 100%</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Работаем по официальному договору. Принимаем любую форму оплаты, предоставляем документы.</p>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-stopwatch"></i>
+                    </div>
+                    <h3 class="text-lg font-black uppercase mb-2">Подача в срок</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Техника регулярно проходит ТО. Выезжаем на объект заправленными и готовыми к работе.</p>
+                </div>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <main id="catalog" class="py-20 max-w-7xl mx-auto px-4">
+    <section id="categories" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-3 sm:gap-4">
+                <a href="#cranes" class="p-4 sm:p-6 rounded-2xl bg-white border border-slate-200 hover:border-yellow-500 text-center transition-all group shadow-sm">
+                    <i class="fa-solid fa-hook text-xl sm:text-2xl mb-2 text-slate-400 group-hover:text-yellow-500"></i>
+                    <span class="block text-[10px] sm:text-xs font-black uppercase tracking-widest">Автокраны</span>
+                </a>
+                <a href="#excavators" class="p-4 sm:p-6 rounded-2xl bg-white border border-slate-200 hover:border-yellow-500 text-center transition-all group shadow-sm">
+                    <i class="fa-solid fa-trowel-bricks text-xl sm:text-2xl mb-2 text-slate-400 group-hover:text-yellow-500"></i>
+                    <span class="block text-[10px] sm:text-xs font-black uppercase tracking-widest">Экскаваторы</span>
+                </a>
+                <a href="#loaders" class="p-4 sm:p-6 rounded-2xl bg-white border border-slate-200 hover:border-yellow-500 text-center transition-all group shadow-sm">
+                    <i class="fa-solid fa-truck-ramp-box text-xl sm:text-2xl mb-2 text-slate-400 group-hover:text-yellow-500"></i>
+                    <span class="block text-[10px] sm:text-xs font-black uppercase tracking-widest">Погрузчики</span>
+                </a>
+                <a href="#aerial" class="p-4 sm:p-6 rounded-2xl bg-white border border-slate-200 hover:border-yellow-500 text-center transition-all group shadow-sm">
+                    <i class="fa-solid fa-arrow-up-from-bracket text-xl sm:text-2xl mb-2 text-slate-400 group-hover:text-yellow-500"></i>
+                    <span class="block text-[10px] sm:text-xs font-black uppercase tracking-widest">Вышки</span>
+                </a>
+                <a href="#manipulators" class="p-4 sm:p-6 rounded-2xl bg-white border border-slate-200 hover:border-yellow-500 text-center transition-all group shadow-sm col-span-2 md:col-span-1">
+                    <i class="fa-solid fa-truck-moving text-xl sm:text-2xl mb-2 text-slate-400 group-hover:text-yellow-500"></i>
+                    <span class="block text-[10px] sm:text-xs font-black uppercase tracking-widest">Манипуляторы</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main id="catalog" class="py-16 max-w-7xl mx-auto px-4 sm:px-6">
         
-        <div id="cranes" class="mb-24">
-            <div class="flex items-center gap-4 mb-12" data-aos="fade-right">
-                <div class="h-1 w-12 bg-yellow-500"></div>
-                <h2 class="text-3xl font-black uppercase tracking-tighter">Автокраны</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="group bg-white border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500" data-aos="fade-up">
-                    <div class="img-container">
-                        <img src="image_0.png" alt="Ивановец 16т">
-                        <div class="absolute top-4 left-4 bg-black text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">16 тонн</div>
-                    </div>
-                    <div class="p-6 text-center">
-                        <h4 class="text-xl font-black uppercase mb-2">Ивановец 16т</h4>
-                        <p class="text-gray-500 text-sm mb-6">Стрела: 18 метров. Идеален для тесных площадок.</p>
-                        <a href="tel:+79966553170" class="flex items-center justify-center gap-3 w-full bg-gray-900 text-white py-4 font-black uppercase tracking-tighter hover:bg-yellow-500 hover:text-black transition-colors">
-                            <i class="fa-solid fa-phone"></i> +7 996 655 3170
-                        </a>
+        <div id="cranes" class="mb-20">
+            <h3 class="text-2xl sm:text-3xl font-black uppercase mb-8 border-l-4 border-yellow-500 pl-4 tracking-tighter">Автокраны</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card flex flex-col bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200" data-aos="fade-up">
+                    <div class="img-box shrink-0"><img src="image_0.png" alt="Ивановец 16т"></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-lg font-black uppercase mb-1">Ивановец 16т</h4>
+                        <p class="text-sm text-slate-500 mb-6 flex-grow">Вылет стрелы 18м. Отлично подходит для малоэтажного строительства и погрузки.</p>
+                        <a href="tel:+79966553170" class="block w-full text-center bg-yellow-500 text-slate-900 py-3.5 rounded-xl font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-colors">Заказать</a>
                     </div>
                 </div>
-
-                <div class="group bg-white border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
-                    <div class="img-container">
-                        <img src="image_1.png" alt="Галичанин 25т">
-                        <div class="absolute top-4 left-4 bg-black text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">25 тонн</div>
-                    </div>
-                    <div class="p-6 text-center">
-                        <h4 class="text-xl font-black uppercase mb-2">Галичанин 25т</h4>
-                        <p class="text-gray-500 text-sm mb-6">Стрела: 22 метра. Универсальный выбор для строек.</p>
-                        <a href="tel:+79966553170" class="flex items-center justify-center gap-3 w-full bg-gray-900 text-white py-4 font-black uppercase tracking-tighter hover:bg-yellow-500 hover:text-black transition-colors">
-                            <i class="fa-solid fa-phone"></i> +7 996 655 3170
-                        </a>
+                <div class="card flex flex-col bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200" data-aos="fade-up">
+                    <div class="img-box shrink-0"><img src="image_1.png" alt="Галичанин 25т"></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-lg font-black uppercase mb-1">Галичанин 25т</h4>
+                        <p class="text-sm text-slate-500 mb-6 flex-grow">Вылет стрелы 22м. Универсальная и самая востребованная машина.</p>
+                        <a href="tel:+79966553170" class="block w-full text-center bg-yellow-500 text-slate-900 py-3.5 rounded-xl font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-colors">Заказать</a>
                     </div>
                 </div>
-
-                <div class="group bg-white border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
-                    <div class="img-container">
-                        <img src="image_2.png" alt="Клинцы 25т">
-                        <div class="absolute top-4 left-4 bg-yellow-500 text-black text-[10px] font-bold px-3 py-1 uppercase tracking-widest">Вездеход 6х6</div>
-                    </div>
-                    <div class="p-6 text-center">
-                        <h4 class="text-xl font-black uppercase mb-2">Клинцы 25т</h4>
-                        <p class="text-gray-500 text-sm mb-6">Стрела: 31 метр. Пройдет в любые труднодоступные места.</p>
-                        <a href="tel:+79966553170" class="flex items-center justify-center gap-3 w-full bg-gray-900 text-white py-4 font-black uppercase tracking-tighter hover:bg-yellow-500 hover:text-black transition-colors">
-                            <i class="fa-solid fa-phone"></i> +7 996 655 3170
-                        </a>
+                <div class="card flex flex-col bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200" data-aos="fade-up">
+                    <div class="img-box shrink-0"><img src="image_2.png" alt="Клинцы 25т"></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="inline-block bg-slate-900 text-yellow-500 text-[10px] font-black uppercase px-2 py-1 rounded mb-2 w-max">Вездеход 6х6</span>
+                        <h4 class="text-lg font-black uppercase mb-1">Клинцы 25т</h4>
+                        <p class="text-sm text-slate-500 mb-6 flex-grow">Стрела 31м. Незаменим в условиях бездорожья и плохой проходимости.</p>
+                        <a href="tel:+79966553170" class="block w-full text-center bg-yellow-500 text-slate-900 py-3.5 rounded-xl font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-colors">Заказать</a>
                     </div>
                 </div>
-
-                <div class="group bg-white border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500" data-aos="fade-up">
-                    <div class="img-container">
-                        <img src="image_3.png" alt="Галичанин 32т">
-                        <div class="absolute top-4 left-4 bg-black text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">32 тонны</div>
-                    </div>
-                    <div class="p-6 text-center">
-                        <h4 class="text-xl font-black uppercase mb-2">Галичанин 32т</h4>
-                        <p class="text-gray-500 text-sm mb-6">Стрела: 31 метр. Мощный кран для тяжелых грузов.</p>
-                        <a href="tel:+79966553170" class="flex items-center justify-center gap-3 w-full bg-gray-900 text-white py-4 font-black uppercase tracking-tighter hover:bg-yellow-500 hover:text-black transition-colors">
-                            <i class="fa-solid fa-phone"></i> +7 996 655 3170
-                        </a>
+                <div class="card flex flex-col bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200" data-aos="fade-up">
+                    <div class="img-box shrink-0"><img src="image_3.png" alt="Галичанин 32т"></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-lg font-black uppercase mb-1">Галичанин 32т</h4>
+                        <p class="text-sm text-slate-500 mb-6 flex-grow">Стрела 31м. Высокая грузоподъемность для тяжелых конструкций.</p>
+                        <a href="tel:+79966553170" class="block w-full text-center bg-yellow-500 text-slate-900 py-3.5 rounded-xl font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-colors">Заказать</a>
                     </div>
                 </div>
-
-                <div class="group bg-white border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
-                    <div class="img-container">
-                        <img src="image_4.png" alt="Zoomlion 30т">
-                        <div class="absolute top-4 left-4 bg-black text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">30 тонн</div>
-                    </div>
-                    <div class="p-6 text-center">
-                        <h4 class="text-xl font-black uppercase mb-2">Zoomlion ZTC300</h4>
-                        <p class="text-gray-500 text-sm mb-6">Стрела: 42м + гусек. Высокие технологичные работы.</p>
-                        <a href="tel:+79966553170" class="flex items-center justify-center gap-3 w-full bg-gray-900 text-white py-4 font-black uppercase tracking-tighter hover:bg-yellow-500 hover:text-black transition-colors">
-                            <i class="fa-solid fa-phone"></i> +7 996 655 3170
-                        </a>
+                <div class="card flex flex-col bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200" data-aos="fade-up">
+                    <div class="img-box shrink-0"><img src="image_4.png" alt="Zoomlion 30т"></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-lg font-black uppercase mb-1">Zoomlion 30т</h4>
+                        <p class="text-sm text-slate-500 mb-6 flex-grow">Стрела 42м + 9м гусек. Джойстиковое управление для ювелирной точности.</p>
+                        <a href="tel:+79966553170" class="block w-full text-center bg-yellow-500 text-slate-900 py-3.5 rounded-xl font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-colors">Заказать</a>
                     </div>
                 </div>
-
-                <div class="group bg-white border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
-                    <div class="img-container">
-                        <img src="image_5.png" alt="Liebherr 55т">
-                        <div class="absolute top-4 left-4 bg-black text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">55 тонн</div>
-                    </div>
-                    <div class="p-6 text-center">
-                        <h4 class="text-xl font-black uppercase mb-2">Liebherr LTM 1055</h4>
-                        <p class="text-gray-500 text-sm mb-6">Флагман нашего парка. Максимальная точность.</p>
-                        <a href="tel:+79966553170" class="flex items-center justify-center gap-3 w-full bg-gray-900 text-white py-4 font-black uppercase tracking-tighter hover:bg-yellow-500 hover:text-black transition-colors">
-                            <i class="fa-solid fa-phone"></i> +7 996 655 3170
-                        </a>
+                <div class="card flex flex-col bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200" data-aos="fade-up">
+                    <div class="img-box shrink-0"><img src="image_5.png" alt="Liebherr 55т"></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-lg font-black uppercase mb-1">Liebherr LTM 1055</h4>
+                        <p class="text-sm text-slate-500 mb-6 flex-grow">Грузоподъемность 55т. Стрела 40м + 16м. Флагман автопарка для сложных задач.</p>
+                        <a href="tel:+79966553170" class="block w-full text-center bg-yellow-500 text-slate-900 py-3.5 rounded-xl font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-colors">Заказать</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="excavators" class="mb-24">
-            <div class="flex items-center gap-4 mb-12" data-aos="fade-right">
-                <div class="h-1 w-12 bg-yellow-500"></div>
-                <h2 class="text-3xl font-black uppercase tracking-tighter">Экскаваторы и погрузчики</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="group bg-white border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500" data-aos="fade-up">
-                    <div class="img-container">
-                        <img src="image_7.png" alt="Hitachi Zaxis">
-                    </div>
-                    <div class="p-6 text-center">
-                        <h4 class="text-xl font-black uppercase mb-2">Hitachi Zaxis 160W</h4>
-                        <p class="text-gray-500 text-sm mb-6">Колесный. Ковш 0.8 м³. Быстрая работа на объекте.</p>
-                        <a href="tel:+79966553170" class="flex items-center justify-center gap-3 w-full bg-gray-900 text-white py-4 font-black uppercase tracking-tighter hover:bg-yellow-500 hover:text-black transition-colors">
-                            <i class="fa-solid fa-phone"></i> +7 996 655 3170
-                        </a>
+        <div id="excavators" class="mb-20">
+            <h3 class="text-2xl sm:text-3xl font-black uppercase mb-8 border-l-4 border-yellow-500 pl-4 tracking-tighter">Экскаваторы</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card flex flex-col bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200" data-aos="fade-up">
+                    <div class="img-box shrink-0"><img src="image_7.png" alt="Hitachi"></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-lg font-black uppercase mb-1">Hitachi Zaxis 160W</h4>
+                        <p class="text-sm text-slate-500 mb-6 flex-grow">Колесный экскаватор. Глубина копания 5.8м, ковш 0.8 куба. Очень маневренный.</p>
+                        <a href="tel:+79966553170" class="block w-full text-center bg-yellow-500 text-slate-900 py-3.5 rounded-xl font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-colors">Заказать</a>
                     </div>
                 </div>
-
-                <div class="group bg-white border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
-                    <div class="img-container">
-                        <img src="image_8.png" alt="JCB">
-                    </div>
-                    <div class="p-6 text-center">
-                        <h4 class="text-xl font-black uppercase mb-2">Экскаватор-погрузчик JCB</h4>
-                        <p class="text-gray-500 text-sm mb-6">Равноколесный. Универсал для копки и погрузки.</p>
-                        <a href="tel:+79966553170" class="flex items-center justify-center gap-3 w-full bg-gray-900 text-white py-4 font-black uppercase tracking-tighter hover:bg-yellow-500 hover:text-black transition-colors">
-                            <i class="fa-solid fa-phone"></i> +7 996 655 3170
-                        </a>
-                    </div>
-                </div>
-
-                <div class="group bg-white border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
-                    <div class="img-container">
-                        <img src="image_9.png" alt="Погрузчик">
-                    </div>
-                    <div class="p-6 text-center">
-                        <h4 class="text-xl font-black uppercase mb-2">Фронтальный погрузчик</h4>
-                        <p class="text-gray-500 text-sm mb-6">Ковш 2.0 м³. Погрузка сыпучих материалов 24/7.</p>
-                        <a href="tel:+79966553170" class="flex items-center justify-center gap-3 w-full bg-gray-900 text-white py-4 font-black uppercase tracking-tighter hover:bg-yellow-500 hover:text-black transition-colors">
-                            <i class="fa-solid fa-phone"></i> +7 996 655 3170
-                        </a>
-                    </div>
-                </div>
-
-                <div class="group bg-white border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500" data-aos="fade-up">
-                    <div class="img-container">
-                        <img src="image_10.png" alt="Komatsu">
-                        <div class="absolute top-4 left-4 bg-black text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">Гусеничный</div>
-                    </div>
-                    <div class="p-6 text-center">
-                        <h4 class="text-xl font-black uppercase mb-2">Komatsu PC160</h4>
-                        <p class="text-gray-500 text-sm mb-6">Ковш 1.2 м³. Для тяжелых земляных работ.</p>
-                        <a href="tel:+79966553170" class="flex items-center justify-center gap-3 w-full bg-gray-900 text-white py-4 font-black uppercase tracking-tighter hover:bg-yellow-500 hover:text-black transition-colors">
-                            <i class="fa-solid fa-phone"></i> +7 996 655 3170
-                        </a>
+                <div class="card flex flex-col bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200" data-aos="fade-up">
+                    <div class="img-box shrink-0"><img src="image_10.png" alt="Komatsu"></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="inline-block bg-slate-900 text-yellow-500 text-[10px] font-black uppercase px-2 py-1 rounded mb-2 w-max">Гусеничный ход</span>
+                        <h4 class="text-lg font-black uppercase mb-1">Komatsu PC160</h4>
+                        <p class="text-sm text-slate-500 mb-6 flex-grow">Ковш 1.2 куба, глубина 6.9м. Высочайшая производительность на тяжелом грунте.</p>
+                        <a href="tel:+79966553170" class="block w-full text-center bg-yellow-500 text-slate-900 py-3.5 rounded-xl font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-colors">Заказать</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="special" class="mb-24">
-            <div class="flex items-center gap-4 mb-12" data-aos="fade-right">
-                <div class="h-1 w-12 bg-yellow-500"></div>
-                <h2 class="text-3xl font-black uppercase tracking-tighter">Дополнительная спецтехника</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="group bg-white border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500" data-aos="fade-up">
-                    <div class="img-container">
-                        <img src="image_6.png" alt="Вышка">
-                        <div class="absolute top-4 left-4 bg-black text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">28 метров</div>
-                    </div>
-                    <div class="p-6 text-center">
-                        <h4 class="text-xl font-black uppercase mb-2">Автовышка КАМАЗ</h4>
-                        <p class="text-gray-500 text-sm mb-6">Вездеход 6х6. Работа на высоте до 28 метров.</p>
-                        <a href="tel:+79966553170" class="flex items-center justify-center gap-3 w-full bg-gray-900 text-white py-4 font-black uppercase tracking-tighter hover:bg-yellow-500 hover:text-black transition-colors">
-                            <i class="fa-solid fa-phone"></i> +7 996 655 3170
-                        </a>
+        <div id="loaders" class="mb-20">
+            <h3 class="text-2xl sm:text-3xl font-black uppercase mb-8 border-l-4 border-yellow-500 pl-4 tracking-tighter">Погрузчики</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card flex flex-col bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200" data-aos="fade-up">
+                    <div class="img-box shrink-0"><img src="image_8.png" alt="JCB"></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-lg font-black uppercase mb-1">Экскаватор-погрузчик JCB</h4>
+                        <p class="text-sm text-slate-500 mb-6 flex-grow">Равноколесный. Идеален для планировки, погрузки грунта и уборки территории.</p>
+                        <a href="tel:+79966553170" class="block w-full text-center bg-yellow-500 text-slate-900 py-3.5 rounded-xl font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-colors">Заказать</a>
                     </div>
                 </div>
-
-                <div class="group bg-white border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
-                    <div class="img-container">
-                        <img src="image_11.png" alt="Манипулятор">
-                    </div>
-                    <div class="p-6 text-center">
-                        <h4 class="text-xl font-black uppercase mb-2">Манипулятор КАМАЗ</h4>
-                        <p class="text-gray-500 text-sm mb-6">Стрела 7т. Борт 10т. Перевозка и монтаж сразу.</p>
-                        <a href="tel:+79966553170" class="flex items-center justify-center gap-3 w-full bg-gray-900 text-white py-4 font-black uppercase tracking-tighter hover:bg-yellow-500 hover:text-black transition-colors">
-                            <i class="fa-solid fa-phone"></i> +7 996 655 3170
-                        </a>
+                <div class="card flex flex-col bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200" data-aos="fade-up">
+                    <div class="img-box shrink-0"><img src="image_9.png" alt="Фронтальный"></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-lg font-black uppercase mb-1">Фронтальный погрузчик</h4>
+                        <p class="text-sm text-slate-500 mb-6 flex-grow">Ковш 2.0 куба. Оптимален для перевалки сыпучих материалов, песка и щебня.</p>
+                        <a href="tel:+79966553170" class="block w-full text-center bg-yellow-500 text-slate-900 py-3.5 rounded-xl font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-colors">Заказать</a>
                     </div>
                 </div>
             </div>
         </div>
 
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div id="aerial" class="card flex flex-col bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200" data-aos="fade-up">
+                <div class="img-box shrink-0"><img src="image_6.png" alt="Вышка"></div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="inline-block bg-slate-900 text-yellow-500 text-[10px] font-black uppercase px-2 py-1 rounded mb-2 w-max">Вездеход 6х6</span>
+                    <h4 class="text-lg font-black uppercase mb-1">Автовышка КАМАЗ 28м</h4>
+                    <p class="text-sm text-slate-500 mb-6 flex-grow">Телескопическая. Безопасные высотные и монтажные работы.</p>
+                    <a href="tel:+79966553170" class="block w-full text-center bg-yellow-500 text-slate-900 py-3.5 rounded-xl font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-colors">Заказать</a>
+                </div>
+            </div>
+            <div id="manipulators" class="card flex flex-col bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200" data-aos="fade-up">
+                <div class="img-box shrink-0"><img src="image_11.png" alt="Манипулятор"></div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h4 class="text-lg font-black uppercase mb-1">Манипулятор КАМАЗ</h4>
+                    <p class="text-sm text-slate-500 mb-6 flex-grow">Грузоподъемность стрелы до 7т, кузова до 20т. Погрузка, доставка и выгрузка за 1 рейс.</p>
+                    <a href="tel:+79966553170" class="block w-full text-center bg-yellow-500 text-slate-900 py-3.5 rounded-xl font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-colors">Заказать</a>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer class="bg-gray-950 text-white py-16 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <div class="mb-8">
-                <span class="text-2xl font-black uppercase tracking-tighter">СпецТранс<span class="text-yellow-500">Авто</span></span>
-            </div>
-            <div class="flex flex-col gap-4 items-center">
-                <p class="text-gray-400 font-bold uppercase tracking-widest text-sm">Связь с диспетчером:</p>
-                <a href="tel:+79966553170" class="text-3xl md:text-5xl font-black hover:text-yellow-500 transition-colors tracking-tighter">+7 996 655 3170</a>
-                <p class="text-gray-500 text-xs mt-4">© 2026 СпецТрансАвто | Ярославль и область</p>
+    <footer class="bg-slate-950 py-16 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <p class="text-yellow-500 font-black uppercase tracking-[0.2em] text-[10px] sm:text-xs mb-6">Диспетчерская на связи</p>
+            <a href="tel:+79966553170" class="text-3xl sm:text-5xl md:text-6xl font-black text-white hover:text-yellow-500 transition-colors block mb-4">+7 996 655 3170</a>
+            <p class="text-slate-400 text-sm mb-12">Звоните в любое время, работаем 24/7</p>
+            <div class="border-t border-slate-800 pt-8 mt-8">
+                <p class="text-slate-600 text-[10px] uppercase tracking-widest">© 2026 СпецТрансАвто | Ярославская область. Все права защищены.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Инициализация анимаций с защитой от горизонтального скролла
-        AOS.init({
-            once: true,
-            duration: 800,
-            offset: 50,
-            disable: 'mobile' // Отключаем тяжелые анимации на старых мобилках для плавности
-        });
-
-        // Плавная прокрутка для категорий
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        AOS.init({ once: true, duration: 600, offset: 50 });
     </script>
 </body>
 </html>
